@@ -16,13 +16,14 @@ if(isset($_POST['reset'])) {
 <head>
 <meta charset="utf-8">
 <link href="output.css" rel="stylesheet">
-<title>Weekly Meal Planner</title>
+<title>Yummeals</title>
 
 </head>
 
 <body class="">
 <header class="m-4">
-<h1 class="text-pink-300 font-bold text-center">Weekly Meal Planner</h1>
+<h1 class="text-pink-300 font-bold text-center">Yummeals</h1>
+<h2 class="text-center text-sm">Your weekly meal planner</h2>
 <h3 class="text-center italic text-sm">Let the app organize your meals for you to eat this week.</h3>
 </header>
 <!-- <input type="submit" name="launch" value="Plan your meals">  -->
@@ -90,7 +91,7 @@ if(isset($_POST['reset'])) {
 
 <!-- List of meals of user -->
 <div class="text-center">
-    <h2 class="font-semibold">My meals list</h2>
+    <h2 class="font-semibold my-4">My meals list</h2>
     <?php
         echo "<li>";
         foreach($_SESSION["mealsList"] as $meal) {
@@ -103,7 +104,8 @@ if(isset($_POST['reset'])) {
 
 <!-- Table print -->
 <div class="col-span-2 bg-yellow-100 centered md:h-screen">
-    <h2 class="text-center font-semibold my-3">Meal Planning</h2>
+    <div class="mt-20">
+    <h2 class="text-center font-semibold my-4">Meal Planning</h2>
     <table class="table-auto bg-white shadow-md rounded m-auto">
         <thead>
             <?php
@@ -127,6 +129,7 @@ if(isset($_POST['reset'])) {
             }
         ?>
     </table>
+    </div>
 </div>
 </div>
 
